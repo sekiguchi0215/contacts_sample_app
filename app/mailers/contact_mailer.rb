@@ -5,10 +5,13 @@ class ContactMailer < ApplicationMailer
   #
   #   en.contact_mailer.user_email.subject
   #
-  def user_email
-    @greeting = "Hi"
+  def user_email(name:, email:)
+    @name = name
 
-    mail to: "to@example.org"
+    mail(
+      to: email,
+      subject: "【contacts_sample_app】お問い合わせを受付いたしました"
+    ) 
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -17,8 +20,6 @@ class ContactMailer < ApplicationMailer
   #   en.contact_mailer.admin_email.subject
   #
   def admin_email
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+    
   end
 end
