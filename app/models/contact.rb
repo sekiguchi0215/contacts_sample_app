@@ -4,5 +4,5 @@ class Contact < ApplicationRecord
   validates :name, lenght: { maximum: 48}
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, lenght: { maximum: 256 }
   validates :contact, presence: true, lenght: { maximum: 2000 }
-  validates :remote_ip, presence: true
+  validates :remote_ip, presence: trueつ
 end
