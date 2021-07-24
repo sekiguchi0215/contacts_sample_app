@@ -19,7 +19,7 @@ class ContactMailer < ApplicationMailer
   #
   #   en.contact_mailer.admin_email.subject
   #
-  def admin_email
+  def admin_email(contact)
     @contact = contact
     @name = contact.name.present? ? contact.name : contact.email
     subject = "【アプリ名】お問い合わせがありました"
