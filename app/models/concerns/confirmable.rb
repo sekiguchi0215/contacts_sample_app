@@ -1,7 +1,7 @@
 module Confirmable
   extend ActiveSupport::Concern
 
-  include do
+  included do
     validates :submitted, acceptance: true
     validates :confirmed, acceptance: true
 
